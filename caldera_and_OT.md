@@ -23,4 +23,22 @@ nano ~/.bashrc
 source ~/.bashrc # reload your .bashrc
 go version # verify installation, mine: 1.19.9
 
-From <https://ucy-my.sharepoint.com/personal/cpashi02_ucy_ac_cy/Documents/PhD/Technical_Documentations/KIOS_projects/Caldera-OT/Caldera-and-OT.docx> 
+#I had problem with packages incompatibilities so i use version 4.2.0 instead of latest:5.0.0
+#Cloning and requirements
+git clone https://github.com/mitre/caldera.git --recursive --tag 4.2.0
+cd caldera
+pip3 install -r requirements.txt
+pip3 install -r requirements.txt
+#Running Caldera
+python3 server.py --insecure –build
+
+# 1. check for errors and warning in the execution and solve them if there are needed
+# 2. You expect to see in the end of running a big, printed CALDERA, then :
+
+# ***In your browser run: http://localhost:8888 and then the application will start locally
+# To login use :
+# Username: admin
+# Password admin
+
+
+# 3. When you solve any issue and reach this stage you can continue to Caldera-OT plugins 
