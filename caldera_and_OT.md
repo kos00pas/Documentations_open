@@ -42,3 +42,23 @@ python3 server.py --insecure –build
 
 
 # 3. When you solve any issue and reach this stage you can continue to Caldera-OT plugins 
+#In a different folder do: 
+git clone https://github.com/mitre/caldera-ot.git --recursive
+
+# 1. Manually open the new folder and copy ONLY the folders
+# (bacnet, dnp3, modbus, profinet, iec61850) 
+# to the folder of the original Caldera that you git
+# clone before, and specifically to the folder: caldera/plugins
+# 2. Open file conf/default.yml and in the section plugins add the
+     #following lines: 
+# 3. Open a Terminal in the caldera folder and run again the command:
+
+- backnet 
+- dnp3
+- modbus
+- profinet
+- iec61850
+
+
+python3 server.py --insecure --build
+# At the http://localhost:8888  you can now find the plugins we just add 
